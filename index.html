@@ -22,14 +22,12 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-  /* NAV */
   nav { position: sticky; top: 0; z-index: 100; background: var(--accent); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); }
   .nav-logo { font-weight: 800; font-size: 1.05rem; color: #fff; letter-spacing: .03em; }
   .nav-links { display: flex; gap: 1.5rem; list-style: none; }
   .nav-links a { text-decoration: none; color: var(--silver); font-size: 0.88rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; transition: color .2s; }
   .nav-links a:hover { color: #fff; }
 
-  /* HERO */
   .hero { text-align: center; padding: 6rem 2rem 5rem; background: linear-gradient(160deg, var(--accent) 0%, #2d6b4a 100%); border-bottom: 4px solid var(--silver); }
   .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; letter-spacing: .01em; }
   .hero h1 span { color: var(--silver); }
@@ -39,12 +37,10 @@
   .btn-outline { background: transparent; border: 2px solid var(--silver); color: var(--silver); margin-left: .75rem; }
   .btn-outline:hover { background: rgba(255,255,255,0.12); color: #fff; }
 
-  /* SECTIONS */
   section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
   .section-title { font-size: 1.5rem; font-weight: 800; margin-bottom: .5rem; letter-spacing: .01em; text-transform: uppercase; color: var(--accent); }
   .section-sub { color: var(--muted); margin-bottom: 2.5rem; font-size: .95rem; border-left: 3px solid var(--silver); padding-left: .75rem; }
 
-  /* SERVICES */
   #uslugi { max-width: 1100px; }
   .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
   .service-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
@@ -52,7 +48,6 @@
   .service-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .4rem; }
   .service-card p { color: var(--muted); font-size: 1rem; }
 
-  /* GALLERY */
   #realizacje { max-width: 1100px; }
   .gallery-controls { display: flex; gap: .75rem; margin-bottom: 2rem; flex-wrap: wrap; align-items: center; }
   .gallery-controls input { flex: 1; min-width: 180px; padding: .6rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-size: .9rem; background: var(--white); }
@@ -69,8 +64,8 @@
   .post-delete { margin-top: .75rem; background: none; border: none; color: #c0392b; font-size: .8rem; cursor: pointer; padding: 0; }
   .post-delete:hover { text-decoration: underline; }
   .empty-state { text-align: center; color: var(--muted); padding: 3rem; grid-column: 1/-1; }
+  .loading-state { text-align: center; color: var(--muted); padding: 3rem; grid-column: 1/-1; }
 
-  /* ADD POST */
   #dodaj { max-width: 700px; }
   .form-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); }
   .form-row { margin-bottom: 1.2rem; }
@@ -90,7 +85,6 @@
   .pass-err { color: #c0392b; font-size: .82rem; margin-top: .5rem; display: none; }
   #formArea { display: none; }
 
-  /* CONTACT */
   #kontakt { max-width: 1100px; }
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
   .contact-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
@@ -98,10 +92,8 @@
   .contact-card h4 { font-size: .88rem; font-weight: 700; margin-bottom: .2rem; }
   .contact-card p { font-size: .9rem; color: var(--muted); }
 
-  /* FOOTER */
-  footer { text-align: center; padding: 2rem; border-top: 3px solid var(--accent); color: var(--muted); font-size: .82rem; background: var(--text); color: var(--silver); }
+  footer { text-align: center; padding: 2rem; border-top: 3px solid var(--accent); font-size: .82rem; background: var(--text); color: var(--silver); }
 
-  /* MODAL */
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 999; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
   .modal-img { max-width: 90vw; max-height: 85vh; border-radius: 8px; }
@@ -125,7 +117,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Ryszard Tatar<br><span>Firma Usługowa</span></h1>
   <p>Profesjonalne usługi porządkowe, konserwacja nieruchomości, prace remontowe i pielęgnacja terenów zielonych. Rzetelnie, terminowo, z gwarancją jakości.</p>
@@ -133,7 +124,6 @@
   <a href="#realizacje" class="btn btn-outline">Zobacz realizacje</a>
 </div>
 
-<!-- SERVICES -->
 <section id="uslugi">
   <div class="section-title">Nasze usługi</div>
   <div class="section-sub">Kompleksowa obsługa nieruchomości i otoczenia</div>
@@ -147,17 +137,17 @@
   </div>
 </section>
 
-<!-- GALLERY -->
 <section id="realizacje">
   <div class="section-title">Realizacje</div>
   <div class="section-sub">Efekty naszej pracy – przed i po</div>
   <div class="gallery-controls">
     <input type="text" id="searchInput" placeholder="🔍 Szukaj realizacji..." oninput="renderPosts()">
   </div>
-  <div class="posts-grid" id="postsGrid"></div>
+  <div class="posts-grid" id="postsGrid">
+    <div class="loading-state">⏳ Ładowanie realizacji...</div>
+  </div>
 </section>
 
-<!-- ADD POST -->
 <section id="dodaj">
   <div class="section-title">Dodaj realizację</div>
   <div class="section-sub">Opublikuj nowe zdjęcia przed i po</div>
@@ -180,13 +170,13 @@
       <div class="form-row">
         <label>Zdjęcia</label>
         <div class="form-images">
-          <div class="img-upload" id="uploadBefore">
+          <div class="img-upload">
             <input type="file" accept="image/*" onchange="previewImg(this,'before')">
             <div class="upload-label">PRZED</div>
             <img class="preview" id="prevBefore">
             <div class="placeholder" id="phBefore">📷 Kliknij, aby wybrać zdjęcie</div>
           </div>
-          <div class="img-upload" id="uploadAfter">
+          <div class="img-upload">
             <input type="file" accept="image/*" onchange="previewImg(this,'after')">
             <div class="upload-label">PO</div>
             <img class="preview" id="prevAfter">
@@ -194,13 +184,12 @@
           </div>
         </div>
       </div>
-      <button class="btn" onclick="submitPost()">Opublikuj realizację</button>
+      <button class="btn" id="submitBtn" onclick="submitPost()">Opublikuj realizację</button>
       <span id="formMsg" style="margin-left:1rem;font-size:.85rem;color:var(--accent);"></span>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="kontakt">
   <div class="section-title">Kontakt</div>
   <div class="section-sub">Zapraszamy do współpracy – wycena bezpłatna</div>
@@ -213,46 +202,55 @@
 
 <footer>© 2026 Ryszard Tatar Firma Usługowa · Wszelkie prawa zastrzeżone</footer>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="imgModal" onclick="closeModal()">
   <button class="modal-close" onclick="closeModal()">✕</button>
   <img class="modal-img" id="modalImg" src="" alt="">
 </div>
 
 <script>
+// ============================================
+// WKLEJ SWOJE DANE TUTAJ:
+const JSONBIN_ID = '69c11ab8c3097a1dd54f7bbc';
+const JSONBIN_KEY = '$2a$10$.Tdsguzb3SbwoNS7xFHMVuwZR2dVISRbCFqFdARl6p9wKFlQuL.xG';
+// ============================================
+
 const ADMIN_PASS = 'Nubira184';
-const STORAGE_KEY = 'rt_posts_v1';
+const API = `https://api.jsonbin.io/v3/b/${JSONBIN_ID}`;
+const HEADERS = { 'Content-Type': 'application/json', 'X-Master-Key': JSONBIN_KEY };
 
 let posts = [];
 let imgBefore = null, imgAfter = null;
 let authenticated = false;
 
-// --- STORAGE ---
 async function loadPosts() {
   try {
-    const r = await window.storage.get(STORAGE_KEY);
-    if (r) posts = JSON.parse(r.value);
+    const r = await fetch(API + '/latest', { headers: HEADERS });
+    const d = await r.json();
+    posts = d.record.posts || [];
   } catch(e) { posts = []; }
   renderPosts();
 }
 
 async function savePosts() {
-  try { await window.storage.set(STORAGE_KEY, JSON.stringify(posts)); } catch(e) {}
+  await fetch(API, {
+    method: 'PUT',
+    headers: HEADERS,
+    body: JSON.stringify({ posts })
+  });
 }
 
-// --- AUTH ---
 function checkPass() {
   const v = document.getElementById('passInput').value;
   if (v === ADMIN_PASS) {
     document.getElementById('passGate').style.display = 'none';
     document.getElementById('formArea').style.display = 'block';
     authenticated = true;
+    renderPosts();
   } else {
     document.getElementById('passErr').style.display = 'block';
   }
 }
 
-// --- IMAGE PREVIEW ---
 function previewImg(input, side) {
   const file = input.files[0];
   if (!file) return;
@@ -274,40 +272,49 @@ function previewImg(input, side) {
   reader.readAsDataURL(file);
 }
 
-// --- SUBMIT ---
 async function submitPost() {
   const title = document.getElementById('fTitle').value.trim();
   const desc = document.getElementById('fDesc').value.trim();
   const msg = document.getElementById('formMsg');
+  const btn = document.getElementById('submitBtn');
   if (!title) { msg.textContent = '⚠️ Podaj tytuł realizacji.'; msg.style.color='#c0392b'; return; }
   if (!imgBefore || !imgAfter) { msg.textContent = '⚠️ Dodaj oba zdjęcia (przed i po).'; msg.style.color='#c0392b'; return; }
 
+  btn.disabled = true;
+  btn.textContent = 'Zapisywanie...';
+  msg.textContent = '';
+
   const post = {
     id: Date.now(),
-    title,
-    desc,
+    title, desc,
     before: imgBefore,
     after: imgAfter,
     date: new Date().toLocaleDateString('pl-PL', { day:'2-digit', month:'long', year:'numeric' })
   };
   posts.unshift(post);
-  await savePosts();
-  renderPosts();
 
-  // reset
-  document.getElementById('fTitle').value = '';
-  document.getElementById('fDesc').value = '';
-  ['Before','After'].forEach(s => {
-    document.getElementById('prev'+s).style.display='none';
-    document.getElementById('ph'+s).style.display='block';
-  });
-  imgBefore = null; imgAfter = null;
-  msg.textContent = '✅ Realizacja opublikowana!'; msg.style.color='var(--accent)';
-  setTimeout(() => msg.textContent = '', 3000);
-  document.getElementById('realizacje').scrollIntoView({behavior:'smooth'});
+  try {
+    await savePosts();
+    renderPosts();
+    document.getElementById('fTitle').value = '';
+    document.getElementById('fDesc').value = '';
+    ['Before','After'].forEach(s => {
+      document.getElementById('prev'+s).style.display='none';
+      document.getElementById('ph'+s).style.display='block';
+    });
+    imgBefore = null; imgAfter = null;
+    msg.textContent = '✅ Realizacja opublikowana!'; msg.style.color='var(--accent)';
+    setTimeout(() => msg.textContent = '', 3000);
+    document.getElementById('realizacje').scrollIntoView({behavior:'smooth'});
+  } catch(e) {
+    msg.textContent = '❌ Błąd zapisu. Sprawdź połączenie.'; msg.style.color='#c0392b';
+    posts.shift();
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Opublikuj realizację';
 }
 
-// --- RENDER ---
 function renderPosts() {
   const q = (document.getElementById('searchInput')?.value || '').toLowerCase();
   const grid = document.getElementById('postsGrid');
@@ -322,11 +329,11 @@ function renderPosts() {
     <div class="post-card">
       <div class="post-images">
         <div class="post-img-wrap">
-          <img src="${p.before}" alt="przed" onclick="openModal('${p.id}','before')" style="cursor:pointer">
+          <img src="${p.before}" alt="przed" onclick="openModal(${p.id},'before')" style="cursor:pointer">
           <span class="img-label">PRZED</span>
         </div>
         <div class="post-img-wrap">
-          <img src="${p.after}" alt="po" onclick="openModal('${p.id}','after')" style="cursor:pointer">
+          <img src="${p.after}" alt="po" onclick="openModal(${p.id},'after')" style="cursor:pointer">
           <span class="img-label">PO</span>
         </div>
       </div>
@@ -340,7 +347,6 @@ function renderPosts() {
   `).join('');
 }
 
-// --- DELETE ---
 async function deletePost(id) {
   if (!confirm('Usunąć tę realizację?')) return;
   posts = posts.filter(p => p.id !== id);
@@ -348,7 +354,6 @@ async function deletePost(id) {
   renderPosts();
 }
 
-// --- MODAL ---
 function openModal(id, side) {
   const p = posts.find(p => p.id == id);
   if (!p) return;
